@@ -1,0 +1,20 @@
+{
+  "name": "rewards-settlement-quest",
+  "version": "1.0.0",
+  "description": "Prevent a recurring business-flow failure (duplicate payout on batch retry) in a settlement/payout system.",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "playwright test",
+    "test:buggy": "cross-env ENABLE_IDEMPOTENCY_FIX=false playwright test",
+    "test:fixed": "cross-env ENABLE_IDEMPOTENCY_FIX=true playwright test"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.5",
+    "cross-env": "^10.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2"
+  }
+}
